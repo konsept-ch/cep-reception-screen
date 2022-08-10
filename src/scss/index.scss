@@ -2,3 +2,41 @@
 @import '~@fontsource/roboto/400.css';
 @import '~@fontsource/roboto/500.css';
 @import '~@fontsource/roboto/700.css';
+
+.container {
+    padding: 10px;
+}
+
+.table-panel-container {
+    display: flex;
+    gap: 10px;
+}
+
+.table-panel {
+    height: calc(100vh - 64px);
+    width: 215px;
+    flex-shrink: 0;
+}
+
+.logo {
+    width: 100%;
+}
+
+.welcome-text {
+    margin-bottom: 10px;
+}
+
+.upcoming-courses-table {
+    tr:nth-of-type(even) {
+        background-color: rgb(0 0 0 / 4%);
+    }
+
+    table {
+        min-width: 650px;
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+}

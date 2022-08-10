@@ -1,8 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import type { ThunkAction, Action } from '@reduxjs/toolkit'
+import { receptionApi } from '../services/reception'
 
 export const store = configureStore({
-    reducer: {},
+    reducer: {
+        [receptionApi.reducerPath]: receptionApi.reducer,
+    },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat([receptionApi.middleware]),
 })
 
 export type AppDispatch = typeof store.dispatch
