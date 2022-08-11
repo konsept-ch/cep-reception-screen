@@ -59,7 +59,9 @@ export function App() {
                                     <TableCell>{course.name}</TableCell>
                                     <TableCell className="no-wrap">{course.roomFloor}</TableCell>
                                     <TableCell className="no-wrap">{course.roomName}</TableCell>
-                                    <TableCell>{course.teachers?.join(', ')}</TableCell>
+                                    <TableCell>
+                                        <span className="with-ellipsis">{course.teachers?.join(', ')}</span>
+                                    </TableCell>
                                 </TableRow>
                             ))}
                         </TableBody>

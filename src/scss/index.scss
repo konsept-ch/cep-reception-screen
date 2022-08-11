@@ -22,6 +22,14 @@
     white-space: nowrap;
 }
 
+.with-ellipsis {
+    display: block;
+    overflow: hidden;
+    max-width: 30ch;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .footer {
     text-align: center;
 }
