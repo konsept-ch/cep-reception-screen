@@ -8,7 +8,7 @@ export function App() {
         data: courses,
         isLoading,
         error: errorGettingCourses,
-    } = useGetCoursesQuery(undefined, { refetchOnMountOrArgChange: true })
+    } = useGetCoursesQuery(undefined, { refetchOnMountOrArgChange: true, pollingInterval: 60000 * 2 })
 
     return isLoading ? (
         <div>Loading...</div>

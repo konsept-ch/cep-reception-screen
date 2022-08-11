@@ -3,12 +3,12 @@ import { Provider } from 'react-redux'
 import { store } from './app/store'
 import { App } from './App'
 
-test('renders learn react link', () => {
+test('renders loader', () => {
     render(
         <Provider store={store}>
             <App />
         </Provider>
     )
 
-    expect(screen.getByText(/learn/i)).toBeInTheDocument()
+    expect(screen.getByText('Loading...', { exact: false })).toBeInTheDocument()
 })
