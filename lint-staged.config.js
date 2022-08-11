@@ -5,5 +5,4 @@ module.exports = {
     '*.{js,ts,tsx}': ['npm run test-related'],
     '**/*.ts?(x)': () => 'tsc -p tsconfig.json --noEmit',
     '*.scss': ['stylelint --fix', 'prettier --write'],
-    '*.{png,jpeg,jpg,gif,svg}': 'imagemin-lint-staged',
 }
