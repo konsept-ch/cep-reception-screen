@@ -1,4 +1,5 @@
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material'
+import { pollingIntervalMinutes } from './constants'
 
 import { useGetCoursesQuery } from './services/reception'
 import { formatDate } from './utils'
@@ -8,12 +9,19 @@ export function App() {
         data: courses,
         isLoading,
         error: errorGettingCourses,
-    } = useGetCoursesQuery(undefined, { refetchOnMountOrArgChange: true, pollingInterval: 60000 * 2 })
+    } = useGetCoursesQuery(undefined, {
+        refetchOnMountOrArgChange: true,
+        pollingInterval: 60000 * pollingIntervalMinutes,
+    })
 
     return isLoading ? (
-        <div>Loading...</div>
+        <div>Chargement...</div>
     ) : errorGettingCourses ? (
-        <div>We are sorry! There is an issue and we cannot display the courses right now</div>
+        <div>
+            <p>La liste des séances est temporairement indisponible.</p>
+            <p>Peut-être le serveur est en redéploiement ou il n'y a pas de connexion internet.</p>
+            <p>Nous allons reéssayer automatiquement à chaque {pollingIntervalMinutes} minutes.</p>
+        </div>
     ) : (
         <div className="container">
             <div className="table-panel-container">
@@ -27,7 +35,10 @@ export function App() {
                         | Nous vous souhaitons la bienvenue dans les formations suivantes :
                     </p>
                     {courses?.length === 0 ? (
-                        <div>Aucune formation aujourd'hui</div>
+                        <div>
+                            Aucune formation dans le prochain 1 heure et 30 minutes. Mise à jour automatique à chaque{' '}
+                            {pollingIntervalMinutes} minutes.
+                        </div>
                     ) : (
                         <TableContainer className="upcoming-courses-table" component={Paper}>
                             <Table>

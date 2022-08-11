@@ -10,5 +10,5 @@ test('renders loader', () => {
         </Provider>
     )
 
-    expect(screen.getByText('Loading...', { exact: false })).toBeInTheDocument()
+    expect(screen.getByText('Chargement...', { exact: false })).toBeInTheDocument()
 })
