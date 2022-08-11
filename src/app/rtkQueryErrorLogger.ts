@@ -1,5 +1,5 @@
 import { isRejectedWithValue } from '@reduxjs/toolkit'
-// eslint-disable-next-line no-duplicate-imports
+// eslint-disable-next-line
 import type { MiddlewareAPI, Middleware } from '@reduxjs/toolkit'
 
 export const rtkQueryErrorLogger: Middleware = (api: MiddlewareAPI) => (next) => (action) => {
