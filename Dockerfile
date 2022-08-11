@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # Stage 1 - the build process
-FROM node:16.16.2-alpine as build-deps
+FROM node:16.16-alpine as build-deps
 WORKDIR /usr/src/app
 COPY ["package.json", "package-lock.json*", "./"]
 RUN npm ci
