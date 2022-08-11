@@ -1,4 +1,5 @@
 import { CoursesTable } from './CoursesTable'
+import { ErrorBoundary } from './ErrorBoundary'
 
 export function App() {
     return (
@@ -11,7 +12,9 @@ export function App() {
                 </strong>{' '}
                 | Nous vous souhaitons la bienvenue dans les formations suivantes :
             </p>
-            <CoursesTable />
+            <ErrorBoundary>
+                <CoursesTable />
+            </ErrorBoundary>
             <footer className="footer">
                 <p>
                     Retrouvez toutes nos formations sur <strong>www.cep.swiss</strong>
