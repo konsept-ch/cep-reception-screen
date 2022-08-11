@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npm run prettier:check
+npm run eslint:check
+npm run stylelint:check
+CI=true npm test
