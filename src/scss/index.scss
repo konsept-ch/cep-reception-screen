@@ -22,7 +22,15 @@
     white-space: nowrap;
 }
 
-.with-ellipsis {
+.with-ellipsis-course {
+    display: block;
+    overflow: hidden;
+    max-width: 80ch;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.with-ellipsis-teachers {
     display: block;
     overflow: hidden;
     max-width: 30ch;

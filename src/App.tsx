@@ -56,11 +56,13 @@ export function App() {
                                         dateString: course.start,
                                         isTimeVisible: true,
                                     })}`}</TableCell>
-                                    <TableCell>{course.name}</TableCell>
+                                    <TableCell>
+                                        <span className="with-ellipsis-course">{course.name}</span>
+                                    </TableCell>
                                     <TableCell className="no-wrap">{course.roomFloor}</TableCell>
                                     <TableCell className="no-wrap">{course.roomName}</TableCell>
                                     <TableCell>
-                                        <span className="with-ellipsis">{course.teachers?.join(', ')}</span>
+                                        <span className="with-ellipsis-teachers">{course.teachers?.join(', ')}</span>
                                     </TableCell>
                                 </TableRow>
                             ))}
