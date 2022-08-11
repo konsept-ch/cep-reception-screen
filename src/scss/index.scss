@@ -1,20 +1,7 @@
-@import '~@fontsource/roboto/300.css';
-@import '~@fontsource/roboto/400.css';
-@import '~@fontsource/roboto/500.css';
-@import '~@fontsource/roboto/700.css';
+@import 'fonts';
 
 .welcome-paragraph {
     padding-left: 16px;
-}
-
-.table-panel {
-    height: calc(100vh - 64px);
-    width: 215px;
-    flex-shrink: 0;
-}
-
-.logo {
-    width: 100%;
 }
 
 .welcome-text {
@@ -31,10 +18,10 @@
     }
 }
 
-.footer {
-    text-align: center;
-}
-
 .no-wrap {
     white-space: nowrap;
+}
+
+.footer {
+    text-align: center;
 }
