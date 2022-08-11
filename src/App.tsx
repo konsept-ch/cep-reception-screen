@@ -17,14 +17,14 @@ export function App() {
     ) : (
         <div className="container">
             <div className="table-panel-container">
-                <div className="table-panel">
-                    <img src="https://www.cep.vd.ch/cep/cep-logo-ecran.jpg" alt="CEP logo" className="logo" />
-                </div>
                 <div>
                     <p>
                         <strong className="welcome-text">
-                            Nous vous souhaitons la bienvenue dans les formations suivantes :
+                            {Intl.DateTimeFormat('fr-CH', { year: 'numeric', month: 'long', day: 'numeric' }).format(
+                                new Date()
+                            )}{' '}
                         </strong>
+                        | Nous vous souhaitons la bienvenue dans les formations suivantes :
                     </p>
                     {courses?.length === 0 ? (
                         <div>Aucune formation aujourd'hui</div>
@@ -60,7 +60,7 @@ export function App() {
                 </div>
             </div>
             <footer className="footer">
-                Retrouvez toutes nos formations sur <strong>www.cep.vd.ch</strong>
+                Retrouvez toutes nos formations sur <strong>www.cep.swiss</strong>
             </footer>
         </div>
     )
