@@ -3,13 +3,8 @@
 @import '~@fontsource/roboto/500.css';
 @import '~@fontsource/roboto/700.css';
 
-.container {
-    padding: 10px;
-}
-
-.table-panel-container {
-    display: flex;
-    gap: 10px;
+.welcome-paragraph {
+    padding-left: 16px;
 }
 
 .table-panel {
@@ -38,7 +33,6 @@
 
 .footer {
     text-align: center;
-    padding: 10px 0;
 }
 
 .no-wrap {
