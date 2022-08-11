@@ -59,8 +59,8 @@ export function App() {
                                                 isTimeVisible: true,
                                             })}`}</TableCell>
                                             <TableCell>{course.name}</TableCell>
-                                            <TableCell>{course.roomFloor}</TableCell>
-                                            <TableCell>{course.roomName}</TableCell>
+                                            <TableCell className="no-wrap">{course.roomFloor}</TableCell>
+                                            <TableCell className="no-wrap">{course.roomName}</TableCell>
                                             <TableCell>{course.teachers?.join(', ')}</TableCell>
                                         </TableRow>
                                     ))}
