@@ -34,8 +34,6 @@ export function CoursesTable() {
         <div className="full-height">
             <div className="align-center">
                 <p>La liste des séances est temporairement indisponible.</p>
-                <p>Peut-être le serveur est en redéploiement ou il n'y a pas de connexion internet.</p>
-                <p>Nous allons reéssayer automatiquement à chaque {pollingIntervalMinutes} minutes.</p>
             </div>
         </div>
     ) : (
@@ -43,7 +41,7 @@ export function CoursesTable() {
             {courses?.length === 0 ? (
                 <div className="full-height">
                     <div className="align-center">
-                        <p>Aucune formation dans le prochain 1 heure et 30 minutes.</p>
+                        <p>Aucune formation prévue prochainement.</p>
                         <p>Mise à jour automatique à chaque {pollingIntervalMinutes} minutes.</p>
                     </div>
                 </div>
@@ -67,7 +65,7 @@ export function CoursesTable() {
                                         isTimeVisible: true,
                                     })}`}</TableCell>
                                     <TableCell>
-                                        <span className="with-ellipsis-course">{course.name}</span>
+                                        <strong className="with-ellipsis-course">{course.name}</strong>
                                     </TableCell>
                                     <TableCell className="no-wrap">{course.roomFloor}</TableCell>
                                     <TableCell className="no-wrap">{course.roomName}</TableCell>
