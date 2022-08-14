@@ -1,7 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-export const SERVICE_URL = 'http://localhost:4000'
-
 export interface Course {
     id: string
     start: string
@@ -15,7 +13,7 @@ export interface Course {
 export const receptionApi = createApi({
     reducerPath: 'receptionApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: SERVICE_URL,
+        baseUrl: process.env.REACT_APP_SERVICE_URL,
     }),
     endpoints: (builder) => ({
         getCourses: builder.query<Array<Course>, void>({
