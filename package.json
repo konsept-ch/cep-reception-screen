@@ -17,7 +17,7 @@
     "eslint:check": "eslint --ext .js,.jsx,.ts,.tsx . --report-unused-disable-directives",
     "eslint:fix": "eslint --ext .js,.jsx,.ts,.tsx . --fix",
     "stylelint:check": "stylelint **/*.scss",
-    "stylelint:fix": "stylelint --ext .js,.jsx,.ts,.tsx . --fix",
+    "stylelint:fix": "stylelint **/*.scss --fix",
     "prettier:check": "prettier . --ignore-unknown --check",
     "prettier:fix": "prettier . --ignore-unknown --write",
     "test-related": "cross-env NODE_ENV=test CI=true npm run test -- --bail --findRelatedTests",
