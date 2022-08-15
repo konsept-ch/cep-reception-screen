@@ -17,7 +17,10 @@ export function App() {
             </ErrorBoundary>
             <footer className="footer">
                 <p>
-                    Retrouvez toutes nos formations sur <strong>www.cep.swiss</strong>
+                    Retrouvez toutes nos formations sur{' '}
+                    <a href="www.cep.swiss" target="_blank" className="website-link">
+                        <strong>www.cep.swiss</strong>
+                    </a>
                 </p>
             </footer>
         </>
