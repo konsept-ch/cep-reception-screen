@@ -11,7 +11,7 @@ import {
 import { pollingIntervalMinutes } from './constants'
 
 import { useGetCoursesQuery } from './services/reception'
-import { formatDate } from './utils'
+import { formatTime } from './utils'
 
 export function CoursesTable() {
     const {
@@ -60,10 +60,7 @@ export function CoursesTable() {
                         <TableBody>
                             {courses?.map((course) => (
                                 <TableRow key={course.id}>
-                                    <TableCell>{`${formatDate({
-                                        dateString: course.start,
-                                        isTimeVisible: true,
-                                    })}`}</TableCell>
+                                    <TableCell>{formatTime({ dateString: course.start })}</TableCell>
                                     <TableCell>
                                         <strong className="with-ellipsis-course">{course.name}</strong>
                                     </TableCell>
