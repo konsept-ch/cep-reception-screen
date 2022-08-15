@@ -1,6 +1,9 @@
 {
   "name": "cep-reception-screen",
   "version": "0.1.0",
+  "description": "CEP - Reception screen",
+  "author": "konsept.ch",
+  "license": "SEE LICENSE IN LICENSE.txt",
   "private": true,
   "engines": {
     "node": ">=16.16.0",
