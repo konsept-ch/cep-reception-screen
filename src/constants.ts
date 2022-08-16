@@ -1,1 +1,1 @@
-export const pollingIntervalMinutes = 2
+export const pollingIntervalMinutes = process.env.NODE_ENV === 'development' ? 0.1 : 2

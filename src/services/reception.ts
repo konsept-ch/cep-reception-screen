@@ -6,7 +6,10 @@ export interface Course {
     end: string
     roomName: string
     roomFloor: string
-    teachers: Array<string>
+    tutors: {
+        firstName: string
+        lastName: string
+    }[]
     name: string
 }
 

@@ -37,7 +37,7 @@ export function CoursesTable() {
             </div>
         </div>
     ) : (
-        <>
+        <main>
             {courses?.length === 0 ? (
                 <div className="full-height">
                     <div className="align-center">
@@ -59,14 +59,18 @@ export function CoursesTable() {
                         <TableBody>
                             {courses?.map((course) => (
                                 <TableRow key={course.id}>
-                                    <TableCell>{formatTime({ dateString: course.start })}</TableCell>
+                                    <TableCell className="cell">{formatTime({ dateString: course.start })}</TableCell>
                                     <TableCell>
-                                        <strong className="with-ellipsis-course">{course.name}</strong>
+                                        <strong className="with-ellipsis-course cell">{course.name}</strong>
                                     </TableCell>
-                                    <TableCell className="no-wrap">{course.roomFloor}</TableCell>
-                                    <TableCell className="no-wrap">{course.roomName}</TableCell>
+                                    <TableCell className="no-wrap cell">{course.roomFloor}</TableCell>
+                                    <TableCell className="no-wrap cell">{course.roomName}</TableCell>
                                     <TableCell>
-                                        <span className="with-ellipsis-teachers">{course.teachers?.join(', ')}</span>
+                                        <span className="with-ellipsis-teachers cell">
+                                            {course.tutors
+                                                ?.map(({ firstName, lastName }) => `${lastName} ${firstName}`)
+                                                .join(', ')}
+                                        </span>
                                     </TableCell>
                                 </TableRow>
                             ))}
@@ -74,6 +78,6 @@ export function CoursesTable() {
                     </Table>
                 </TableContainer>
             )}
-        </>
+        </main>
     )
 }
