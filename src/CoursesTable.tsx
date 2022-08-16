@@ -41,8 +41,7 @@ export function CoursesTable() {
             {courses?.length === 0 ? (
                 <div className="full-height">
                     <div className="align-center">
-                        <p>Aucune formation prévue prochainement.</p>
-                        <p>Mise à jour automatique à chaque {pollingIntervalMinutes} minutes.</p>
+                        <p>Aucune formation prévue actuellement.</p>
                     </div>
                 </div>
             ) : (
