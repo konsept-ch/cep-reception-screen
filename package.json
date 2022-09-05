@@ -21,6 +21,8 @@
     "stylelint:fix": "stylelint **/*.scss --fix",
     "prettier:check": "prettier . --ignore-unknown --check",
     "prettier:fix": "prettier . --ignore-unknown --write",
+    "tsc:check": "tsc --noEmit",
+    "tsc:fix": "tsc --noEmit",
     "test-related": "cross-env NODE_ENV=test CI=true npm run test -- --bail --findRelatedTests",
     "prepare": "husky install"
   },

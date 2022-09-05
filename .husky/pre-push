@@ -4,5 +4,5 @@
 npm run prettier:check
 npm run eslint:check
 npm run stylelint:check
-npx tsc --noEmit
+npm run tsc:check
 CI=true npm test
