@@ -8,10 +8,10 @@ import {
     Paper,
     CircularProgress,
 } from '@mui/material'
-import { pollingIntervalMinutes } from './constants'
 
+import { CourseRow } from './CourseRow'
+import { pollingIntervalMinutes } from './constants'
 import { useGetCoursesQuery } from './services/reception'
-import { formatTime } from './utils'
 
 export function CoursesTable() {
     const {
@@ -58,21 +58,7 @@ export function CoursesTable() {
                         </TableHead>
                         <TableBody>
                             {courses?.map((course) => (
-                                <TableRow key={course.id}>
-                                    <TableCell className="cell">{formatTime({ dateString: course.start })}</TableCell>
-                                    <TableCell>
-                                        <strong className="with-ellipsis-course cell">{course.name}</strong>
-                                    </TableCell>
-                                    <TableCell className="no-wrap cell">{course.roomFloor}</TableCell>
-                                    <TableCell className="no-wrap cell">{course.roomName}</TableCell>
-                                    <TableCell>
-                                        <span className="with-ellipsis-teachers cell">
-                                            {course.tutors
-                                                ?.map(({ firstName, lastName }) => `${lastName} ${firstName}`)
-                                                .join(', ')}
-                                        </span>
-                                    </TableCell>
-                                </TableRow>
+                                <CourseRow course={course} key={course.id} />
                             ))}
                         </TableBody>
                     </Table>
