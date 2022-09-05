@@ -6,7 +6,7 @@ export function App() {
         <>
             <header>
                 <p className="welcome-paragraph">
-                    <strong className="welcome-text">
+                    <strong className="welcome-text" data-testid="current-date">
                         {Intl.DateTimeFormat('fr-CH', { year: 'numeric', month: 'long', day: 'numeric' }).format(
                             new Date()
                         )}
@@ -20,7 +20,13 @@ export function App() {
             <footer className="footer">
                 <p>
                     Retrouvez toutes nos formations sur{' '}
-                    <a href="https://www.cep.swiss" target="_blank" rel="noreferrer" className="website-link">
+                    <a
+                        href="https://www.cep.swiss"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="website-link"
+                        data-testid="website-link"
+                    >
                         <strong>www.cep.swiss</strong>
                     </a>
                 </p>
