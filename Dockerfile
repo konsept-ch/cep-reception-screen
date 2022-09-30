@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # Stage 1 - the build process
-FROM node:16.17-alpine as build-deps
+FROM node:18.10-alpine as build-deps
 ARG REACT_APP_SERVICES_URL
 WORKDIR /usr/src/app
 COPY ["package.json", "package-lock.json*", "./"]

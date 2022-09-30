@@ -11,18 +11,18 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js 16
+      - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
       - run: npm ci
       - run: npm run prettier:check
       - run: npm run eslint:check
       - run: npm run stylelint:check
       - run: npm run tsc:check
-      - run: CI=true npm test
+      - run: CI=true REACT_APP_SERVICES_URL="http://localhost:4000" npm test
       - run: npm run build
