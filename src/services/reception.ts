@@ -11,6 +11,7 @@ export interface Course {
         lastName: string
     }[]
     name: string
+    description?: string
 }
 
 export const receptionApi = createApi({

@@ -13,7 +13,8 @@ export const CourseRow = ({ course }: { course: Course }) => (
         <TableCell className="no-wrap cell">{course.roomName}</TableCell>
         <TableCell>
             <span className="with-ellipsis-teachers cell">
-                {course.tutors?.map(({ firstName, lastName }) => `${lastName} ${firstName}`).join(', ')}
+                {course.tutors?.map(({ firstName, lastName }) => `${lastName} ${firstName}`).join(', ') ??
+                    course.description}
             </span>
         </TableCell>
     </TableRow>
