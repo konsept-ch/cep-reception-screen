@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "cross-env REACT_APP_SERVICES_URL=http://localhost:4000 TSC_COMPILE_ON_ERROR=true DISABLE_ESLINT_PLUGIN=true PORT=3001 react-scripts start",
-    "build": "cross-env REACT_APP_SERVICES_URL=https://middleware.cep-val.ch react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
     "eject": "react-scripts eject",
