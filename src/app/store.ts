@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import type { ThunkAction, Action } from '@reduxjs/toolkit'
+
 import { receptionApi } from '../services/reception'
 import { rtkQueryErrorLogger } from './rtkQueryErrorLogger'
 
