@@ -54,7 +54,7 @@
     "react-dom": "18.2.0",
     "react-redux": "8.0.4",
     "react-scripts": "5.0.1",
-    "sass": "1.55.0",
+    "sass": "1.79.0",
     "stylelint": "14.13.0",
     "stylelint-config-prettier-scss": "0.0.1",
     "stylelint-config-standard-scss": "5.0.0",
